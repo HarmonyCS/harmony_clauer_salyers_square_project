@@ -25,9 +25,9 @@ The app also leverages several Jetpack Libraries, including:
 
 Current Endpoints
 -----------------
-[Ficticious Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees.json)
-[Malformed Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json)
-[Empty Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json)
+- [Ficticious Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees.json)
+- [Malformed Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json)
+- [Empty Employee List](https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json)
 
 Build Tools & Versions
 ----------------------
