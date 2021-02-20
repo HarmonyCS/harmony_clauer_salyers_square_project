@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/directoryListFragment">
+
+    <fragment
+        android:id="@+id/directoryListFragment"
+        android:name="com.darka11y.android.squareproject.screens.directorylist.DirectoryListFragment"
+        android:label="DirectoryListFragment"
+        tools:layout="@layout/directory_list_fragment" />
+</navigation>

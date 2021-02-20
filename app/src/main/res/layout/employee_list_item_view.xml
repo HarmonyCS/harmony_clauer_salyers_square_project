@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="employee"
+            type="com.darka11y.android.squareproject.network.Employee" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/employee_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin_16"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:imageUrl="@{employee.photo_url_small}"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/employee_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toTopOf="@+id/employee_phone_number"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/employee_name"
+            android:text="@{employee.team}"
+            tools:text="Employee Team" />
+
+        <TextView
+            android:id="@+id/employee_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/employee_team"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58000004"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="@{employee.full_name}"
+            tools:text="Employee Name" />
+
+        <TextView
+            android:id="@+id/employee_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/design_default_color_secondary_variant"
+            app:layout_constraintBottom_toTopOf="@+id/employee_email"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/employee_team"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="@{employee.phone_number}"
+            tools:text="416.475.6222" />
+
+        <TextView
+            android:id="@+id/employee_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:textColor="@color/design_default_color_secondary_variant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/employee_phone_number"
+            android:text="@{employee.email_address}"
+            tools:text="harmony.clauer.salyers@gmail.com" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
